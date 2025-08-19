@@ -5,33 +5,8 @@ interface dog {
   owner: string;
 }
 export default async function Home() {
-  const data = [{
-    id_dog: 1,
-    dog_name: "Aom",
-    breed: "yed mae",
-    owner: "Plain"
-  },{
-    id_dog: 1,
-    dog_name: "Aom",
-    breed: "yed mae",
-    owner: "Plain"
-  },{
-    id_dog: 1,
-    dog_name: "Aom",
-    breed: "yed mae",
-    owner: "Plain"
-  },{
-    id_dog: 1,
-    dog_name: "Aom",
-    breed: "yed mae",
-    owner: "Plain"
-  },{
-    id_dog: 1,
-    dog_name: "Aom",
-    breed: "yed mae",
-    owner: "Plain"
-  },]
-
+  const res = await fetch("http://54.206.58.50/api/dogs")
+  const data = await res.json()
   return (
     <>
       <h1 className="text-3xl text-center">DOG LIST</h1>
